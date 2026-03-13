@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "odinaddon",
+  "id": "iqodinaddon",
   "version": "${version}",
-  "name": "OdinAddon",
+  "name": "IQOdinAddon",
   "description": "",
   "authors": [],
   "contact": {},
   "license": "BSD-3-Clause",
-  "icon": "assets/odinaddon/icon.png",
+  "icon": "assets/iqaddon/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
       {
         "adapter": "kotlin",
-        "value": "com.odtheking.odinaddon.OdinAddon"
+        "value": "com.odtheking.iqaddon.OdinAddon"
       }
     ]
   },
   "mixins": [
-    "odinaddon.mixins.json"
+    "iqaddon.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

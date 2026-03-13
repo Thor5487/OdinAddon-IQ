@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.odtheking.odinaddon.mixin",
+  "package": "com.odtheking.iqaddon.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
   ],
@@ -12,6 +12,7 @@
     "requireAnnotations": true
   },
   "client": [
-    "MinecraftMixin"
+    "ClipContextMixin",
+    "PaneOutlineMixin"
   ]
 }
