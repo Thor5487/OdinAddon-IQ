@@ -30,7 +30,7 @@ object MineshaftCD : Module (
         if (!enabled) 0 to 0
 
         if (it) {
-            textDim("§bMineshaft CD: 30.0s", 0, 0, Colors.WHITE)
+            textDim("§bMineshaft CD: §a30.0s", 0, 0, Colors.WHITE)
         }
         else if (timeLeft > 0) {
             val secondsLeft = String.format("%.1f", timeLeft / 1000f)

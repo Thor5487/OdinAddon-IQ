@@ -24,6 +24,6 @@ object OdinAddon : ClientModInitializer {
         listOf(this).forEach { EventBus.subscribe(it) }
 
         // Register modules by adding to the list
-        ModuleManager.registerModules(ModuleConfig("OdinAddon.json"), FullBlock, MineshaftCD)
+        ModuleManager.registerModules(ModuleConfig("OdinAddon-IQ.json"), FullBlock, MineshaftCD)
     }
 }
