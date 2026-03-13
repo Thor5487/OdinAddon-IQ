@@ -21,7 +21,7 @@ object WitherAimBot : Module(
 ) {
     private val fovRadius by NumberSetting("Radius", 50f, 10f, 200f, 1f
                                             , "Radius for Auto-Aiming");
-    private val circleToggled by BooleanSetting("Circle Display", false, "Display Circle")
+    private val circleToggled by BooleanSetting("Circle", false, "Display Circle")
 
     private val lineThickness by NumberSetting(name = "Thickness", default = 1f, min = 1f, max = 5f, increment = 1f
                                             , desc = "Thickness of Line").withDependency { circleToggled }
