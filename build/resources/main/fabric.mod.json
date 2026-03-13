@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "iqodinaddon",
+  "version": "0.0.1",
+  "name": "IQOdinAddon",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "BSD-3-Clause",
+  "icon": "assets/iqaddon/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.odtheking.iqaddon.OdinAddon"
+      }
+    ]
+  },
+  "mixins": [
+    "iqaddon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "fabric-api": ">=0.138.3+1.21.10",
+    "minecraft": "~1.21.10",
+    "fabric-language-kotlin": ">=1.13.8+kotlin.2.3.0",
+    "odin": "*"
+  }
+}

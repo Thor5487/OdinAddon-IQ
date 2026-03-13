@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
+    <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main"/>
+    <module name="OdinAddon.main"/>
+    <option name="PROGRAM_PARAMETERS" value=""/>
+    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\diego\OdinAddon\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dmixin.debug.export=true -Ddevauth.enabled=true -Ddevauth.account=main -XX:+AllowEnhancedClassRedefinition -javaagent:C:\Users\diego\.gradle\caches\modules-2\files-2.1\net.fabricmc\sponge-mixin\0.16.5+mixin.0.8.7\80fc3a9f592673cea87f4cd702f87991c6c9fe4d\sponge-mixin-0.16.5+mixin.0.8.7.jar -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotClient"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/"/>
+    <method v="2">
+      <option enabled="true" name="Make"/>
+    </method>
+    <envs>
+      
+    </envs>
+    <shortenClasspath name="ARGS_FILE"/>
+  <classpathModifications/></configuration>
+</component>
