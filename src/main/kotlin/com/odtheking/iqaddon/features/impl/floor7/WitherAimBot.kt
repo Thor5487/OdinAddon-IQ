@@ -118,7 +118,6 @@ object WitherAimBot : Module(
                 val yaw = Math.toDegrees(atan2(dz, dx)).toFloat() - 90f
                 val pitch = -Math.toDegrees(atan2(dy, distXZ)).toFloat()
 
-                // 強制設定視角 (每秒會更新高達 144+ 次，達到絕對絲滑)
                 player.yRot = yaw
                 player.xRot = pitch
                 player.yRotO = yaw
