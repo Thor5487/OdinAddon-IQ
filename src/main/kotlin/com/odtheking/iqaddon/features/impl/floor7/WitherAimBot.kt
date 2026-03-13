@@ -19,7 +19,7 @@ object WitherAimBot : Module(
     "Wither Aimbot",
     description = "Aimbot for withers in F7/M7"
 ) {
-    private val fovRadius by NumberSetting("Radius", 100f, 10f, 100f, 1f
+    private val fovRadius by NumberSetting("Radius", 100f, 10f, 200f, 1f
                                             , "Radius for Auto-Aiming");
     private val circleToggled by BooleanSetting("Circle Display", false, "Display Circle")
 
