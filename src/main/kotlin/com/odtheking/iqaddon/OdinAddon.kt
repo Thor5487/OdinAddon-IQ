@@ -6,6 +6,7 @@ import com.odtheking.odin.features.ModuleManager
 import com.odtheking.iqaddon.commands.odinAddonCommand
 import com.odtheking.iqaddon.features.impl.skyblock.FullBlock
 import com.odtheking.iqaddon.features.impl.floor7.SSTriggerBot
+import com.odtheking.iqaddon.features.impl.skyblock.MineshaftCD
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback
 
@@ -23,6 +24,6 @@ object OdinAddon : ClientModInitializer {
         listOf(this).forEach { EventBus.subscribe(it) }
 
         // Register modules by adding to the list
-        ModuleManager.registerModules(ModuleConfig("OdinAddon.json"), FullBlock)
+        ModuleManager.registerModules(ModuleConfig("OdinAddon.json"), FullBlock, MineshaftCD)
     }
 }
