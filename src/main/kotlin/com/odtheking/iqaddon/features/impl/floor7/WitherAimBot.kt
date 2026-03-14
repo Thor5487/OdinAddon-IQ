@@ -9,6 +9,7 @@ import com.odtheking.odin.features.Module
 import com.odtheking.odin.utils.Colors
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback
 import net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderEvents
+import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.boss.wither.WitherBoss
 import net.minecraft.world.phys.Vec3
@@ -70,7 +71,7 @@ object WitherAimBot : Module(
             var bestTarget: Entity? = null
 
             level.entitiesForRendering().forEach { entity ->
-                if (entity is WitherBoss && entity.isAlive && entity.invulnerableTicks <= 0) {
+                if (entity is WitherBoss && entity.isAlive && entity.invulnerableTicks < 800) {
 
                     val lerpedPos = entity.getPosition(partialTick)
                     val targetPos = Vec3(lerpedPos.x, lerpedPos.y + 1.25, lerpedPos.z)
@@ -102,11 +103,9 @@ object WitherAimBot : Module(
 
                 if (!isHoldingCorrectWeapon) return@register
 
-                // 玩家自己的眼睛也需要插值，確保視角計算沒有誤差
                 val playerLerpedPos = player.getPosition(partialTick)
                 val playerEyePos = Vec3(playerLerpedPos.x, playerLerpedPos.y + player.eyeHeight, playerLerpedPos.z)
 
-                // 目標瞄準點
                 val targetLerpedPos = bestTarget!!.getPosition(partialTick)
                 val targetAimPos = Vec3(targetLerpedPos.x, targetLerpedPos.y + 1.25, targetLerpedPos.z)
 
